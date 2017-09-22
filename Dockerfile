@@ -8,7 +8,7 @@ ADD packages/bash-4.3.48-r1.apk /packages/bash-4.3.48-r1.apk
 ADD packages/curl-7.55.0-r0.apk /packages/curl-7.55.0-r0.apk
 
 # https://pkgs.alpinelinux.org/packages?name=php%25&repo=all&arch=x86_64&maintainer=all
-RUN apk add --allow-unstrusted /packages/apache2-2.4.27-r0.apk /packages/bash-4.3.48-r1.apk /packages/curl-7.55.0-r0.apk && \
+RUN apk add --allow-untrusted /packages/apache2-2.4.27-r0.apk /packages/bash-4.3.48-r1.apk /packages/curl-7.55.0-r0.apk && \
 rm -f /var/cache/apk/* && \
 mkdir /app && chown -R apache:apache /app && \
 mkdir /run/apache2/ && \
