@@ -9,7 +9,7 @@ ADD packages/curl-7.55.0-r0.apk /packages/curl-7.55.0-r0.apk
 
 RUN ls -l /packages > /packages/ls
 
-RUN apk add --allow-unstrusted /packages/apache2-2.4.27-r0.apk /packages/bash-4.3.48-r1.apk /packages/curl-7.55.0-r0.apk 
+RUN apk add --allow-untrusted /packages/apache2-2.4.27-r0.apk /packages/bash-4.3.48-r1.apk /packages/curl-7.55.0-r0.apk 
 
 RUN rm -f /var/cache/apk/* && \
 mkdir /app && chown -R apache:apache /app && \
