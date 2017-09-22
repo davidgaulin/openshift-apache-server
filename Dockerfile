@@ -5,11 +5,8 @@ RUN mkdir /packages
 
 COPY packages/ /packages/
 
-RUN apk add --allow-untrusted --force /packages/bash-4.3.48-r1.apk 
-RUN apk add --allow-untrusted --force /packages/curl-7.55.0-r0.apk 
-RUN apk add --allow-untrusted --force /packages/apache2-2.4.27-r0.apk
-
-RUN rm -f /var/cache/apk/* && \
+RUN apk add --allow-untrusted --force /packages/bash-4.3.48-r1.apk  /packages/curl-7.55.0-r0.apk /packages/apache2-2.4.27-r0.apk && \
+rm -f /var/cache/apk/* && \
 mkdir /app && chown -R apache:apache /app && \
 mkdir /run/apache2/ && \
 chmod a+rwx /run/apache2/
