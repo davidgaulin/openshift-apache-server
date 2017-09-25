@@ -16,10 +16,10 @@ chmod a+rwx /run/apache2/
 ADD httpd.conf /etc/apache2/httpd.conf
 
 # Run scripts
-ADD scripts/run.sh /scripts/run.sh
-RUN mkdir /scripts/pre-exec.d && \
-mkdir /scripts/pre-init.d && \
-chmod -R 755 /scripts
+# ADD scripts/run.sh /scripts/run.sh
+# RUN mkdir /scripts/pre-exec.d && \
+# mkdir /scripts/pre-init.d && \
+# chmod -R 755 /scripts
 
 # Your app
 ADD app/index.html /app/index.html
@@ -30,7 +30,7 @@ EXPOSE 8080
 # VOLUME /app
 WORKDIR /app
 
-ENTRYPOINT ["/scripts/run.sh"]
+ENTRYPOINT ["/usr/sbin/httpd -f"]
 
 # Set labels used in OpenShift to describe the builder images
 LABEL io.k8s.description="Alpine linux based Apache container" \
