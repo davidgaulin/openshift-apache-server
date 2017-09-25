@@ -47,5 +47,5 @@ apk info apache2
 echo "---------"
 cat /etc/apk/repositories
 echo "---------"
-httpd -D FOREGROUND
+# httpd -D FOREGROUND
 
