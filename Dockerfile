@@ -18,9 +18,9 @@ ADD httpd.conf /etc/apache2/httpd.conf
 # Run scripts
 RUN mkdir /scripts
 ADD scripts/run.sh /scripts/run.sh
-# RUN mkdir /scripts/pre-exec.d && \
-# mkdir /scripts/pre-init.d && \
-RUN chmod -R 755 /scripts
+RUN mkdir /scripts/pre-exec.d && \
+mkdir /scripts/pre-init.d && \
+chmod -R 755 /scripts
 
 # Your app
 ADD app/index.html /app/index.html
