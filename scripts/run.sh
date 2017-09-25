@@ -29,10 +29,18 @@ done
 
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
+echo "---------"
 which httpd
+echo "---------"
 find / -name httpd
+echo "---------"
 ls -l /packages
 echo "---------"
+apk info
+echo "---------"
+apk info apache2
+echo "---------"
 cat /etc/apk/repositories
+echo "---------"
 httpd -D FOREGROUND
 
