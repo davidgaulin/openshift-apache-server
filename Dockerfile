@@ -5,12 +5,15 @@ RUN mkdir /packages
 
 COPY packages/ /packages/
 
-RUN apk add --allow-untrusted --force /packages/* && \
-adduser -D apache && \
-rm -f /var/cache/apk/* && \
-mkdir /app && chown -R apache:apache /app && \
-mkdir -p /run/apache2/ && \
-chmod a+rwx /run/apache2/
+RUN ls /packages/
+
+RUN rm -f /var/cache/apk/* 
+RUN apk add --allow-untrusted --force /packages/* 
+RUN adduser -D apache 
+RUN mkdir /app 
+RUN chown -R apache:apache /app 
+RUN mkdir -p /run/apache2/ 
+RUN chmod a+rwx /run/apache2/
 
 # Apache config
 ADD httpd.conf /etc/apache2/httpd.conf
