@@ -9,7 +9,7 @@ RUN apk add --allow-untrusted --force /packages/bash-4.3.48-r1.apk  /packages/cu
 adduser -D apache && \
 rm -f /var/cache/apk/* && \
 mkdir /app && chown -R apache:apache /app && \
-mkdir /run/apache2/ && \
+mkdir -p /run/apache2/ && \
 chmod a+rwx /run/apache2/
 
 # Apache config
