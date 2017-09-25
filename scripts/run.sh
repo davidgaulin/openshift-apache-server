@@ -29,4 +29,4 @@ done
 
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
-httpd
+httpd -D FOREGROUND
