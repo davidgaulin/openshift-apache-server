@@ -29,5 +29,5 @@ done
 
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
-/usr/sbin/httpd -f
+/usr/sbin/httpd -D FOREGROUND
 
