@@ -29,5 +29,8 @@ done
 
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
+which httpd
+find / -name httpd
+httpd -v
 httpd -D FOREGROUND
 
