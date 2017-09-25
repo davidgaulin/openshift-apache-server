@@ -31,6 +31,8 @@ echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
 which httpd
 find / -name httpd
-httpd -v
+ls -l /packages
+echo "---------"
+cat /etc/apk/repositories
 httpd -D FOREGROUND
 
