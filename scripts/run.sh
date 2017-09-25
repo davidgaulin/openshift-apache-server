@@ -30,5 +30,6 @@ done
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
 which apachectl
+which httpd
 /usr/sbin/httpd -D FOREGROUND
 
