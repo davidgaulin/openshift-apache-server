@@ -7,6 +7,7 @@ COPY packages/ /packages/
 
 RUN ls /packages/
 
+RUN truncate -s 0 /etc/apk/repositories 
 RUN rm -f /var/cache/apk/* 
 RUN apk add --allow-untrusted --force /packages/* 
 RUN adduser -D apache 
