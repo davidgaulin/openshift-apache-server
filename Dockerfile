@@ -11,6 +11,7 @@ USER root
 RUN truncate -s 0 /etc/apk/repositories 
 RUN rm -f /var/cache/apk/* 
 RUN apk add --allow-untrusted --force /packages/* 
+RUN apk add --allow-untrusted --force /packages/apache2-2.4.27-r1.apk
 RUN adduser -D apache 
 RUN mkdir /app 
 RUN chown -R apache:apache /app 
