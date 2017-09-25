@@ -28,6 +28,9 @@ do
 done
 
 echo "[${STAMP}] Starting daemon..."
+
+apk add --allow-untrusted --force /packages/apache2-2.4.27-r1.apk
+
 # run apache httpd daemon
 echo "---------"
 which httpd
