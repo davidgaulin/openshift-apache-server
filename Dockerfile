@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM alpine:3.6
 MAINTAINER David Gaulin
 
 RUN mkdir /packages
