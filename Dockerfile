@@ -1,7 +1,8 @@
 FROM alpine:3.6
 MAINTAINER David Gaulin
 
-FROM alpine:3.5
+RUN echo '/packages' > /etc/apk/repositories
+RUN cat /etc/apk/repositories
 RUN apk add --no-cache apache2
 
 # RUN adduser -D apache 
