@@ -13,7 +13,7 @@ RUN rm -f /var/cache/apk/*
 USER root 
 RUN apk add --allow-untrusted --force /packages/bash-4.3.48-r1.apk
 RUN echo $?
-RUN apk info | grep bash
+RUN apk info 
 #RUN apk add --allow-untrusted --force /packages/apr-1.5.2-r1.apk
 #RUN apk add --allow-untrusted --force /packages/apr-util-1.5.4-r3.apk
 RUN apk add --allow-untrusted --force /packages/curl-7.55.0-r0.apk
