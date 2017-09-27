@@ -3,6 +3,7 @@ MAINTAINER David Gaulin
 
 RUN echo '/packages' > /etc/apk/repositories
 RUN cat /etc/apk/repositories
+RUN apk update
 RUN apk add --no-cache apache2
 
 # RUN adduser -D apache 
