@@ -11,6 +11,8 @@ USER root
 RUN truncate -s 0 /etc/apk/repositories 
 RUN rm -f /var/cache/apk/* 
 
+RUN apk del apache2
+RUN rm /sbin/httpd
 RUN apk add --allow-untrusted --force /packages/bash-4.3.48-r1.apk
 RUN apk add --allow-untrusted --force /packages/apr-1.5.2-r1.apk
 RUN apk add --allow-untrusted --force /packages/apr-util-1.5.4-r3.apk
