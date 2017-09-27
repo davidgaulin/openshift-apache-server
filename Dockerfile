@@ -1,6 +1,8 @@
 FROM alpine:3.6
 MAINTAINER David Gaulin
 
+RUN mkdir -p /packages/x86_64
+COPY packages/ /packages/x86_64/
 RUN echo '/packages' > /etc/apk/repositories
 RUN cat /etc/apk/repositories
 RUN apk update
