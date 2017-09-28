@@ -11,7 +11,8 @@ RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk \
 /packages/x86_64/libuuid-2.28.2-r2.apk \
 /packages/x86_64/expat-2.2.0-r1.apk \
 /packages/x86_64/pcre-8.41-r0.apk \
-/packages/x86_64/apache2-proxy-2.4.27-r1.apk
+/packages/x86_64/apache2-proxy-2.4.27-r1.apk \
+/packages/x86_64/iputils-20121221-r6.apk
 
 RUN mkdir /app 
 RUN chown -R apache:apache /app 
