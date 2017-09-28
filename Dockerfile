@@ -6,7 +6,6 @@ COPY packages/ /packages/x86_64/
 RUN echo '/packages/' > /etc/apk/repositories
 RUN echo '/packages/' >> /etc/apk/repositories
 RUN apk index
-RUN ls /packages/AP*
 RUN ls /packages/x86_64/AP*
 RUN cat /etc/apk/repositories
 RUN apk update
