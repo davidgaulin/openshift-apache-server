@@ -4,9 +4,12 @@ MAINTAINER David Gaulin
 RUN mkdir -p /packages/x86_64
 COPY packages/ /packages/x86_64/
 RUN echo '/packages' > /etc/apk/repositories
+RUN echo '/packages/x86_64' >> /etc/apk/repositories
+RUN apk index
 RUN cat /etc/apk/repositories
 RUN apk update
-RUN apk index
+RUN apk search -v 'apa*'
+
 RUN apk add --no-cache apache2
 
 # RUN adduser -D apache 
