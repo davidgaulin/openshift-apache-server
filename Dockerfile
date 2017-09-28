@@ -12,7 +12,7 @@ RUN echo '' > /etc/apk/repositories
 #RUN apk update
 #RUN apk search -v 
 
-RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk /packages/x86_64/apr-util-1.5.4-r3.apk /packages/x86_64/apr-1.5.2-r1.apk /packages/x86_64/libuuid-2.28.2-r2.apk /packages/x86_64/expat-2.2.0-r1.apk
+RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk /packages/x86_64/apr-util-1.5.4-r3.apk /packages/x86_64/apr-1.5.2-r1.apk /packages/x86_64/libuuid-2.28.2-r2.apk /packages/x86_64/expat-2.2.0-r1.apk /packages/x86_64/pcre-8.41-r0.apk
 
 # RUN adduser -D apache 
 # RUN adduser -D apache 
