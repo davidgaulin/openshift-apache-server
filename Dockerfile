@@ -7,6 +7,7 @@ RUN echo '/packages/' > /etc/apk/repositories
 RUN echo '/packages/' >> /etc/apk/repositories
 RUN apk index
 RUN ls /packages/x86_64/
+RUN ls /packages/
 RUN cat /etc/apk/repositories
 RUN apk update
 RUN apk search -v 
