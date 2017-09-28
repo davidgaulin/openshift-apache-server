@@ -9,7 +9,7 @@ RUN apk index
 RUN ls /packages/x86_64/AP*
 RUN cat /etc/apk/repositories
 RUN apk update
-RUN apk search -v 'apa*'
+RUN apk search -v 
 
 RUN apk add --no-cache apache2
 
