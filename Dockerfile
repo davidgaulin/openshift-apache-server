@@ -15,6 +15,7 @@ RUN apk search -v
 # RUN apk add --no-cache apache2
 
 # RUN adduser -D apache 
+RUN adduser -D apache 
 RUN mkdir /app 
 RUN chown -R apache:apache /app 
 RUN mkdir -p /run/apache2/ 
