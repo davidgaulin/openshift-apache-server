@@ -3,7 +3,7 @@ MAINTAINER David Gaulin
 
 RUN mkdir -p /packages/x86_64
 COPY packages/ /packages/x86_64/
-#RUN echo '/packages/' > /etc/apk/repositories
+RUN echo '' > /etc/apk/repositories
 #RUN echo '/packages/' >> /etc/apk/repositories
 #RUN apk index
 #RUN ls /packages/x86_64/
@@ -15,7 +15,7 @@ COPY packages/ /packages/x86_64/
 RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk /packages/x86_64/apr-util-1.5.4-r3.apk /packages/x86_64/apr-1.5.2-r1.apk /packages/x86_64/libuuid-2.28.2-r2.apk
 
 # RUN adduser -D apache 
-RUN adduser -D apache 
+# RUN adduser -D apache 
 RUN mkdir /app 
 RUN chown -R apache:apache /app 
 RUN mkdir -p /run/apache2/ 
