@@ -29,23 +29,5 @@ done
 
 # run apache httpd daemon
 echo "[${STAMP}] Starting daemon..."
-echo "----====="
-whoami
-echo "---------"
-apk add --allow-untrusted --force /packages/apache2-2.4.27-r1.apk
-
-echo "---------"
-which httpd
-echo "---------"
-find / -name httpd
-echo "---------"
-ls -l /packages
-echo "---------"
-apk info
-echo "---------"
-apk info apache2
-echo "---------"
-cat /etc/apk/repositories
-echo "---------"
-# httpd -D FOREGROUND
+httpd -D FOREGROUND
 
