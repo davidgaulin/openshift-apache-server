@@ -33,6 +33,11 @@ ADD app/index.html /app/index.html
 # Apache config
 ADD httpd.conf /etc/apache2/httpd.conf
 
+# Echo DOCKER_HOST var
+RUN echo $DOCKER_HOST
+RUN echo $DOCKER_HOST DOCKERHOST > /etc/hosts
+
+
 # Exposed Port
 EXPOSE 8080
 
