@@ -28,7 +28,8 @@ do
 done
 
 
-echo $DOCKER_HOST DOCKERHOST > /etc/hosts
+echo $DOCKER_HOST DOCKERHOST >> /etc/hosts
+echo $DOCKER_HOST DOCKERHOST
 cat /etc/hosts
 
 # run apache httpd daemon
