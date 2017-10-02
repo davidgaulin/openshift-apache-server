@@ -27,6 +27,10 @@ do
 	fi
 done
 
+
+echo $DOCKER_HOST DOCKERHOST > /etc/hosts
+cat /etc/hosts
+
 # run apache httpd daemon
 echo "[${STAMP}] Starting daemon..."
 httpd -D FOREGROUND
