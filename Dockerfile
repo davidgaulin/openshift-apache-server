@@ -1,6 +1,13 @@
 FROM alpine:3.6
 MAINTAINER David Gaulin
 
+###
+# Once nexus APK repo is setup 
+# replace all the follwing lines
+# with the following 3
+# RUN echo "http://nexusurl/path/to/repo" >> /etc/apk/repositories
+# apk update
+# apk add --no-cache apache2
 RUN mkdir -p /packages/x86_64
 COPY packages/ /packages/x86_64/
 RUN echo '' > /etc/apk/repositories
@@ -14,7 +21,9 @@ RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk \
 /packages/x86_64/apache2-proxy-2.4.27-r1.apk \
 /packages/x86_64/iputils-20121221-r6.apk \
 /packages/x86_64/libcap-2.25-r1.apk 
-
+#
+# End of line to remove
+####
 
 RUN mkdir /app 
 RUN chown -R apache:apache /app 
