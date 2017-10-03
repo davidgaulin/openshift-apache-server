@@ -39,5 +39,5 @@ ADD app /app
 Create route for development and testing
 
 ```sh
-curl https://raw.githubusercontent.com/ure/openshift-apache-webserver/master/Route.yaml | oc create -f -
+curl https://raw.githubusercontent.com/davidgaulin/openshift-apache-server/master/Route.yaml | oc create -f -
 ```
