@@ -5,22 +5,22 @@ MAINTAINER David Gaulin
 # Once nexus APK repo is setup 
 # replace all the follwing lines
 # with the following 3
-# RUN echo "http://nexusurl/path/to/repo" >> /etc/apk/repositories
-# apk update
-# apk add --no-cache apache2
-RUN mkdir -p /packages/x86_64
-COPY packages/ /packages/x86_64/
-RUN echo '' > /etc/apk/repositories
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main/x86_64/" >> /etc/apk/repositories
+apk update
+apk add --no-cache apache2
+#RUN mkdir -p /packages/x86_64
+#COPY packages/ /packages/x86_64/
+#RUN echo '' > /etc/apk/repositories
 
-RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk \
-/packages/x86_64/apr-util-1.5.4-r3.apk \
-/packages/x86_64/apr-1.5.2-r1.apk \
-/packages/x86_64/libuuid-2.28.2-r2.apk \
-/packages/x86_64/expat-2.2.0-r1.apk \
-/packages/x86_64/pcre-8.41-r0.apk \
-/packages/x86_64/apache2-proxy-2.4.27-r1.apk \
-/packages/x86_64/iputils-20121221-r6.apk \
-/packages/x86_64/libcap-2.25-r1.apk 
+#RUN apk add --no-cache /packages/x86_64/apache2-2.4.27-r1.apk \
+#/packages/x86_64/apr-util-1.5.4-r3.apk \
+#/packages/x86_64/apr-1.5.2-r1.apk \
+#/packages/x86_64/libuuid-2.28.2-r2.apk \
+#/packages/x86_64/expat-2.2.0-r1.apk \
+#/packages/x86_64/pcre-8.41-r0.apk \
+#/packages/x86_64/apache2-proxy-2.4.27-r1.apk \
+#/packages/x86_64/iputils-20121221-r6.apk \
+#/packages/x86_64/libcap-2.25-r1.apk 
 #
 # End of line to remove
 ####
