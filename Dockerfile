@@ -6,7 +6,7 @@ MAINTAINER David Gaulin
 # replace all the follwing lines
 # with the following 3
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main/x86_64/" > /etc/apk/repositories
-RUN apk update
+#RUN apk update
 RUN apk add --no-cache apache2
 #RUN mkdir -p /packages/x86_64
 #COPY packages/ /packages/x86_64/
