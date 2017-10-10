@@ -14,8 +14,7 @@ Deploy (externally)
 oc new-app https://github.com/openshift-apache-webserver.git --name apache-webserver
 ```
 
-Deploy (weepee internally)
-add to Your buildconfig
+Deploy add to Your buildconfig
 ```yaml
 spec:
   strategy:
