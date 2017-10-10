@@ -5,7 +5,7 @@ MAINTAINER David Gaulin
 # Once nexus APK repo is setup 
 # replace all the follwing lines
 # with the following 3
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main/x86_64/" >> /etc/apk/repositories
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main/x86_64/" > /etc/apk/repositories
 RUN apk update
 RUN apk add --no-cache apache2
 #RUN mkdir -p /packages/x86_64
